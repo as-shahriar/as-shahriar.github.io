@@ -1,0 +1,293 @@
+$bg-color: #fff;
+$primary-dark-color: #333;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 300;
+  outline: 0;
+}
+
+body {
+  background-color: $bg-color;
+  color: $primary-dark-color;
+  font-family: "Roboto", sans-serif;
+  font-feature-settings: "kern", "liga", "pnum";
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.container {
+  margin: 0 12rem 3rem 12rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: Roboto, sans-serif;
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.1rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: $bg-color;
+  padding-top: 1rem;
+  margin-top: 3rem;
+  z-index: 10000;
+  justify-content: space-between;
+}
+
+.link-icon {
+  color: $primary-dark-color;
+  font-size: 2rem;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.right {
+  .links {
+    display: flex;
+    justify-content: flex-end;
+    li {
+      margin-left: 0.8rem;
+    }
+  }
+  ul {
+    li {
+      text-align: right;
+    }
+  }
+}
+hr {
+  margin: 0.5rem 0;
+  border: none;
+  border-top: 1px dashed $primary-dark-color;
+  opacity: 0.8;
+}
+
+section {
+  margin: 2.8rem 0;
+}
+
+.box {
+  & > span {
+    text-align: center;
+    display: block;
+    font-size: 1.7rem;
+  }
+}
+
+.about {
+  .info {
+    margin-top: 1.5rem;
+    display: flex;
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-left: 3rem;
+    }
+
+    p {
+      text-align: justify;
+      margin-left: 1.8rem;
+    }
+  }
+}
+
+mark {
+  background-color: $primary-dark-color;
+  color: $bg-color;
+  padding: 0.1rem 0.5rem;
+  border-radius: 3px;
+}
+
+.table-div {
+  margin-top: 1.5rem;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  th {
+    font-size: 1.2rem;
+    padding: 0 4rem;
+  }
+  td {
+    padding: 0 5rem;
+    text-align: left;
+  }
+}
+
+.qualification-div {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+      margin-left: 2rem;
+      a {
+        color: $primary-dark-color;
+        text-decoration: none;
+        &:hover {
+          border-bottom: 1px dotted $primary-dark-color;
+        }
+      }
+    }
+  }
+}
+.education {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  p {
+    text-align: center;
+    margin-bottom: 0.2rem;
+    margin-left: 2rem;
+  }
+}
+.project {
+  margin-top: 1.5rem;
+  h2 {
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+.project-link {
+  margin-left: 0.7rem;
+  color: $primary-dark-color;
+  font-size: 1.5rem;
+  margin-bottom: 0.1rem;
+}
+
+.copy {
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  &:hover {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.13);
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .container {
+    margin: 4rem 2rem;
+    header {
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      .left {
+        h2 {
+          margin-bottom: 0;
+        }
+        text-align: center;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column-reverse;
+    .links {
+      margin-top: 0.8rem;
+      display: flex;
+      justify-content: center;
+      li {
+        margin-left: 0.8rem;
+      }
+    }
+    ul {
+      li {
+        text-align: center;
+      }
+    }
+  }
+
+  .about {
+    .info {
+      flex-direction: column;
+      align-items: center;
+      img {
+        margin: 0;
+        margin-bottom: 1rem;
+        width: 130px;
+        height: 130px;
+      }
+      p {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .table-div {
+    th {
+      font-size: 1.2rem;
+      padding: 0 1rem;
+    }
+    td {
+      padding: 0 1rem;
+      text-align: left;
+      font-size: 1rem;
+    }
+  }
+
+  .qualification-div {
+    display: block;
+    ul {
+      flex-direction: column;
+      margin-top: 0.8rem;
+      li {
+        text-align: center;
+        margin: 0;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .education {
+    flex-direction: column;
+    align-items: center;
+    p {
+      margin-left: 0;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+  .container {
+    margin: 4rem 3rem;
+  }
+}
