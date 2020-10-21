@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="asifo1, asifo1 resume, asifo1 cv, asif shahriar,asif shahriar resume,asif shahriar cv, asif shahriar diu, full stack developer">
+    <meta name="theme-color" content="#fff">
+    <meta name="author" content="Asif Shahriar">
     <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
     <meta property="og:title" content="Asif Shahriar | Full Stack Developer" />
     <meta property="og:locale" content="en_US" />
@@ -13,7 +16,7 @@
     <meta property="og:site_name" content="Asif Shahriar Resume" />   
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;1,200&display=swap" rel="stylesheet"> 
     <style>
-      #preloader{width:100vw;height:100vh;position:fixed;top:0;left:0;background-color:#1b1b1b;z-index:999999;display:flex;justify-content:center;align-items:center}body{overflow:hidden}.typewriter h1{color:#f3f1ef;font-family:"Source Code Pro",monospace;font-size:1.3rem;overflow:hidden;border-right:.15em solid #f3f1ef;white-space:nowrap;margin:0 auto;letter-spacing:.15em;animation:typing 1.5s steps(10,end),blink-caret .75s step-end infinite}@keyframes typing{from{width:0}to{width:100%}}@keyframes blink-caret{from,to{border-color:transparent}50%{border-color:#f3f1ef}}
+      #preloader{width:100vw;height:100vh;position:fixed;top:0;left:0;background-color:#222831;z-index:999999;display:flex;justify-content:center;align-items:center}body{overflow:hidden}.typewriter h1{color:#f3f1ef;font-family:"Source Code Pro",monospace;font-size:1.3rem;overflow:hidden;border-right:.15em solid #f3f1ef;white-space:nowrap;margin:0 auto;letter-spacing:.15em;animation:typing 1.5s steps(10,end),blink-caret .75s step-end infinite}@keyframes typing{from{width:0}to{width:100%}}@keyframes blink-caret{from,to{border-color:transparent}50%{border-color:#f3f1ef}}
     </style>
 
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,500' rel='stylesheet' type='text/css'>
@@ -22,7 +25,7 @@
     <title>Asif Shahriar | Full Stack Developer</title>
 </head>
 
-<body>
+<body data-theme="">
     <div id="preloader">
         <div class="typewriter">
           <h1>Loading... </h1>
@@ -188,32 +191,15 @@
       
     </section>
 
+    <footer>
+        <span>Toggle Theme</span>
+        <label class="toggle-control">
+            <input type="checkbox" id="checkbox" checked="checked">
+            <span class="control"></span>
+        </label>
+    </footer>
 
 </div>
 </body>
-
-<script>
-    window.onload = ()=>{
-        setTimeout(()=>{
-            document.getElementById("preloader").style.display = "none";
-            document.body.style.overflow = "auto";
-        },2000);
-    }
-
-    document.querySelectorAll(".copy").forEach(e=>{
-        e.addEventListener("click",()=>{
-        copy(e.textContent);
-    }) ;
-
-    });
-
-    copy = (value)=>{
-        dummy = document.createElement("input"),
-        document.body.appendChild(dummy);
-        dummy.value = value;
-        dummy.select();
-        document.execCommand("copy");
-        document.body.removeChild(dummy);
-    }
-</script>
+<script src="assets/script.js"></script>
 </html>

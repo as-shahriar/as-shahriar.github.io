@@ -1,5 +1,14 @@
-$bg-color: #fff;
-$primary-dark-color: #333;
+:root {
+  --bg-color: #fff;
+  --primary-dark-color: #333;
+  --toggle-btn: #333;
+}
+
+[data-theme="dark"] {
+  --bg-color: #222831;
+  --primary-dark-color: #ececec;
+  --toggle-btn: rgb(97, 97, 97);
+}
 
 * {
   padding: 0;
@@ -10,8 +19,8 @@ $primary-dark-color: #333;
 }
 
 body {
-  background-color: $bg-color;
-  color: $primary-dark-color;
+  background-color: var(--bg-color);
+  color: var(--primary-dark-color);
   font-family: "Roboto", sans-serif;
   font-feature-settings: "kern", "liga", "pnum";
   font-size: 1rem;
@@ -57,7 +66,7 @@ header {
   display: flex;
   position: sticky;
   top: 0;
-  background-color: $bg-color;
+  background-color: var(--bg-color);
   padding-top: 1rem;
   margin-top: 3rem;
   z-index: 10000;
@@ -65,7 +74,7 @@ header {
 }
 
 .link-icon {
-  color: $primary-dark-color;
+  color: var(--primary-dark-color);
   font-size: 2rem;
   user-select: none;
   -webkit-user-select: none;
@@ -89,7 +98,7 @@ header {
 hr {
   margin: 0.5rem 0;
   border: none;
-  border-top: 1px dashed $primary-dark-color;
+  border-top: 1px dashed var(--primary-dark-color);
   opacity: 0.8;
 }
 
@@ -124,8 +133,8 @@ section {
 }
 
 mark {
-  background-color: $primary-dark-color;
-  color: $bg-color;
+  background-color: var(--primary-dark-color);
+  color: var(--bg-color);
   padding: 0.1rem 0.5rem;
   border-radius: 3px;
 }
@@ -156,10 +165,10 @@ mark {
     li {
       margin-left: 2rem;
       a {
-        color: $primary-dark-color;
+        color: var(--primary-dark-color);
         text-decoration: none;
         &:hover {
-          border-bottom: 1px dotted $primary-dark-color;
+          border-bottom: 1px dotted var(--primary-dark-color);
         }
       }
     }
@@ -188,7 +197,7 @@ mark {
 
 .project-link {
   margin-left: 0.7rem;
-  color: $primary-dark-color;
+  color: var(--primary-dark-color);
   font-size: 1.5rem;
   margin-bottom: 0.1rem;
 }
@@ -198,6 +207,79 @@ mark {
   transition: all 0.2s ease-out;
   &:hover {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.13);
+  }
+}
+footer {
+  display: flex;
+  justify-content: flex-end;
+
+  span {
+    margin-right: 0.8rem;
+  }
+}
+
+//toggle button
+$toggle-background-color-on: var(--toggle-btn);
+$toggle-background-color-off: var(--toggle-btn);
+$toggle-control-color: white;
+$toggle-width: 50px;
+$toggle-height: 22px;
+$toggle-gutter: 5px;
+$toggle-radius: 50%;
+$toggle-control-speed: 0.15s;
+$toggle-control-ease: ease-in;
+
+// These are our computed variables
+// change at your own risk.
+$toggle-radius: $toggle-height / 2;
+$toggle-control-size: $toggle-height - ($toggle-gutter * 2);
+
+.toggle-control {
+  display: block;
+  position: relative;
+  padding-left: $toggle-width;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  input:checked ~ .control {
+    background-color: $toggle-background-color-on;
+
+    &:after {
+      left: $toggle-width - $toggle-control-size - $toggle-gutter;
+    }
+  }
+
+  .control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $toggle-height;
+    width: $toggle-width;
+    border-radius: $toggle-radius;
+    background-color: $toggle-background-color-off;
+    transition: background-color $toggle-control-speed $toggle-control-ease;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: $toggle-gutter;
+      top: $toggle-gutter;
+      width: $toggle-control-size;
+      height: $toggle-control-size;
+      border-radius: $toggle-radius;
+      background: $toggle-control-color;
+      transition: left $toggle-control-speed $toggle-control-ease;
+    }
   }
 }
 
