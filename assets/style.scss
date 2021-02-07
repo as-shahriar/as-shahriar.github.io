@@ -134,6 +134,10 @@ section {
     }
   }
 }
+.image {
+  background-color: var(--primary-dark-color);
+  padding: 6px;
+}
 
 mark {
   background-color: var(--primary-dark-color);
