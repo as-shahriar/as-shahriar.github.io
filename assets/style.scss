@@ -61,7 +61,10 @@ h2 {
 ul {
   list-style: none;
 }
-
+a {
+  color: var(--primary-dark-color);
+  text-decoration: none;
+}
 header {
   display: flex;
   position: sticky;
