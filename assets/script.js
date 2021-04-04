@@ -1,10 +1,8 @@
 window.onload = () => {
   theme = getCookie("theme");
   if (theme) document.body.setAttribute("data-theme", theme);
-  setTimeout(() => {
-    document.getElementById("preloader").style.display = "none";
-    document.body.style.overflow = "auto";
-  }, 2000);
+  document.getElementById("preloader").style.display = "none";
+  document.body.style.overflow = "auto";
 };
 
 document.querySelectorAll(".copy").forEach((e) => {
