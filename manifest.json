@@ -4,8 +4,8 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "Asif Shahriar",
-    "short_name": "Asif",
+    "name": "Resume of Asif Shahriar",
+    "short_name": "Asif's Resume",
     "description": "Resume of Asif Shahriar, an experienced software engineer.",
     "orientation": "portrait",
     "icons": [
