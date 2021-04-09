@@ -11,7 +11,7 @@
     <meta name="author" content="Asif Shahriar" />
     <link
       rel="shortcut icon"
-      href="assets/icon/favicon.png"
+      href="assets/icon/icon-192x192.png"
       type="image/x-icon"
     />
     <meta property="og:title" content="Asif Shahriar | Full Stack Developer" />
@@ -35,77 +35,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;1,200&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      #preloader {
-        width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: #fff;
-        z-index: 999999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      body {
-        overflow: hidden;
-      }
-      .typewriter h1 {
-        color: rgba(51, 51, 51, 0.637);
-        font-family: "Source Code Pro", monospace;
-        font-size: 1.3rem;
-        overflow: hidden;
-        border-right: 0.15em solid #f3f1ef;
-        white-space: nowrap;
-        margin: 0 auto;
-        letter-spacing: 0.15em;
-        animation: typing 1.5s steps(10, end),
-          blink-caret 0.75s step-end infinite;
-      }
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-        to {
-          width: 100%;
-        }
-      }
-      @keyframes blink-caret {
-        from,
-        to {
-          border-color: transparent;
-        }
-        50% {
-          border-color: #f3f1ef;
-        }
-      }
-    </style>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,500"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script
-      src="https://kit.fontawesome.com/b2b230e3e8.js"
-      crossorigin="anonymous"
-    ></script>
     <link rel="stylesheet" href="assets/style.css" />
     <title>Asif Shahriar | Software Engineer | asifo1</title>
   </head>
 
   <body data-theme="">
-    <div id="preloader">
-      <div class="typewriter">
-        <h1>Loading...</h1>
-      </div>
-    </div>
-
     <div class="container">
       <header>
         <div class="left">
@@ -150,11 +85,16 @@
         <span>About Me</span>
         <hr />
         <div class="info">
-          <img
-            class="image"
-            src="https://github.com/asifo1.png"
-            alt="Picture"
-          />
+          <div>
+            <div style="position: relative">
+              <div class="image"></div>
+              <img
+                loading="lazy"
+                src="https://github.com/asifo1.png"
+                alt="Picture"
+              />
+            </div>
+          </div>
           <div>
             <p>
               I am an experienced web developer with a diverse and promising
@@ -379,5 +319,19 @@
       </footer>
     </div>
   </body>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;1,200&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,500"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <script
+    src="https://kit.fontawesome.com/b2b230e3e8.js"
+    crossorigin="anonymous"
+  ></script>
   <script src="assets/script.min.js"></script>
 </html>

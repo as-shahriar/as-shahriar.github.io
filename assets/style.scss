@@ -121,22 +121,28 @@ section {
   .info {
     margin-top: 1.5rem;
     display: flex;
+    align-items: center;
     img {
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      margin-left: 3rem;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
-
+    .image {
+      background-color: var(--primary-dark-color);
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      animation: skeleton 3s;
+      animation-iteration-count: infinite;
+    }
     p {
       text-align: justify;
       margin-left: 1.8rem;
     }
   }
-}
-.image {
-  background-color: var(--primary-dark-color);
-  padding: 8px;
 }
 
 mark {
@@ -328,9 +334,12 @@ $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
     .info {
       flex-direction: column;
       align-items: center;
-      img {
-        margin: 0;
+      .image {
+        width: 130px;
+        height: 130px;
         margin-bottom: 1rem;
+      }
+      img {
         width: 130px;
         height: 130px;
       }
@@ -378,5 +387,17 @@ $toggle-control-size: $toggle-height - ($toggle-gutter * 2);
 @media (max-width: 992px) {
   .container {
     margin: 4rem 3rem;
+  }
+}
+
+@keyframes skeleton {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.2;
   }
 }
