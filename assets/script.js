@@ -1,8 +1,6 @@
 window.onload = () => {
   theme = getCookie("theme");
   if (theme) document.body.setAttribute("data-theme", theme);
-  document.getElementById("preloader").style.display = "none";
-  document.body.style.overflow = "auto";
 };
 
 document.querySelectorAll(".copy").forEach((e) => {
